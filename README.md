@@ -14,3 +14,6 @@ VPC
 
 EC2
 ![img_1.png](image/EC2.png)
+
+퍼블릭 ID 주소
+3.36.105.181
