@@ -9,11 +9,17 @@
 
 
 ## Lv_1. VPC, EC2
-VPC
+- VPC
 ![img.png](image/VPC.png)
 
-EC2
+
+- EC2
 ![img_1.png](image/EC2.png)
 
-퍼블릭 ID 주소
+
+- 퍼블릭 ID 주소
 3.36.105.181
+
+
+- 배포 및 검증
+![img.png](image/IP배포.png)
