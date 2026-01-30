@@ -1,6 +1,7 @@
 package sparta.cloudarchitecture.domain.members.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import sparta.cloudarchitecture.domain.members.dto.CreateMemberRequest;
@@ -11,6 +12,7 @@ import sparta.cloudarchitecture.domain.members.repository.MemberRespository;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class MemberService {
     private final MemberRespository memberRespository;
 
@@ -18,7 +20,6 @@ public class MemberService {
     public CreateMemberResponse create(CreateMemberRequest request) {
         Member member = Member.register(request.getName(), request.getAge(), request.getMbti());
         Member createdMember = memberRespository.save(member);
-
         return CreateMemberResponse.register(
                 createdMember.getMemberId(),
                 createdMember.getName(),
