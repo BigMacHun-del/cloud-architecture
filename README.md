@@ -4,5 +4,22 @@
 
 
 
-Lv_0 - AWS Budget 설정
+## Lv_0.  AWS Budget 설정
 ![img.png](image/Budget.png)
+
+
+## Lv_1. VPC, EC2
+- VPC
+![img.png](image/VPC.png)
+
+
+- EC2
+![img_1.png](image/EC2.png)
+
+
+- 퍼블릭 ID 주소
+3.36.105.181
+
+
+- 배포 및 검증
+![img.png](image/IP배포.png)
