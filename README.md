@@ -4,5 +4,5 @@
 
 
 
-Lv_0 - AWS Budget 설정
+## Lv_0.  AWS Budget 설정
 ![img.png](image/Budget.png)
