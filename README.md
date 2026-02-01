@@ -25,6 +25,10 @@
 ![img.png](image/IP배포.png)
 
 ## Lv_2 RDS
+- Parameter store
+![img.png](image/Parameter_store.png)
+
+  
 - 인바운드 규칙
 ![img.png](image/인바운드.png)
 
