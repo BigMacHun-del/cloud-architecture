@@ -23,3 +23,18 @@
 
 - 배포 및 검증
 ![img.png](image/IP배포.png)
+
+## Lv_2 RDS
+- Parameter store
+![img.png](image/Parameter_store.png)
+
+  
+- 인바운드 규칙
+![img.png](image/인바운드.png)
+
+
+- 로컬 연결 테스트
+
+3306 포트의 보안 그룹이 SG->SG로 설정 되어 있기 때문에 EC2를 통해서 접근 함.
+![img_1.png](image/RDS_로컬연결테스트.png)
+![img.png](image/RDS_로컬연결테스트2.png)
