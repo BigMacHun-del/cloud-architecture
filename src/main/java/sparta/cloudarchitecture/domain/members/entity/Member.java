@@ -28,7 +28,7 @@ public class Member {
     @Column(name = "profile_image_key")
     private String profileImageKey;
 
-    @Column(name = "url")
+    @Column(name = "url", columnDefinition = "TEXT")
     private String url;
 
     public static Member register(String name, int age, String mbti) {
