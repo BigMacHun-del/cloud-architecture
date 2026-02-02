@@ -8,8 +8,12 @@ spring:
     aws:
       region:
         static: ap-northeast-2
+
       parameterstore:
         enabled: true
+
+      s3:
+        bucket: camp-health-rmsb6752-files
 
   datasource:
     url: ${db.url}
