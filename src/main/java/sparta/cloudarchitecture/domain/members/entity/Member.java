@@ -25,6 +25,12 @@ public class Member {
     @Column(nullable = false)
     private String mbti;
 
+    @Column(name = "profile_image_key")
+    private String profileImageKey;
+
+    @Column(name = "url", columnDefinition = "TEXT")
+    private String url;
+
     public static Member register(String name, int age, String mbti) {
         Member member = new Member();
         member.name = name;
@@ -34,4 +40,13 @@ public class Member {
         return member;
     }
 
+    // 이미지 키 업데이트 메서드
+    public void updateProfileImage(String imageKey) {
+        this.profileImageKey = imageKey;
+    }
+
+    // 이미지 url 업데이트 메서드
+    public void updateUrl(String url) {
+        this.url = url;
+    }
 }
