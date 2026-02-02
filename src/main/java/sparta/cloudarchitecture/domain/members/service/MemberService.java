@@ -10,6 +10,8 @@ import sparta.cloudarchitecture.domain.members.dto.GetMemberResponse;
 import sparta.cloudarchitecture.domain.members.entity.Member;
 import sparta.cloudarchitecture.domain.members.repository.MemberRespository;
 
+import java.net.URL;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -40,5 +42,39 @@ public class MemberService {
                 member.getAge(),
                 member.getMbti()
         );
+    }
+
+
+
+    // 이미지 키 업데이트
+    @Transactional
+    public void updateProfileImage(Long memberId, String imageKey) {
+        Member member = memberRespository.findById(memberId)
+                .orElseThrow(() -> new IllegalArgumentException("회원을 찾을 수 없습니다."));
+
+        member.updateProfileImage(imageKey);
+    }
+
+
+    // 이미지 키 조회
+    @Transactional(readOnly = true)
+    public String getProfileImageKey(Long memberId) {
+        Member member = memberRespository.findById(memberId)
+                .orElseThrow(() -> new IllegalArgumentException("회원을 찾을 수 없습니다."));
+
+        String profileImageKey = member.getProfileImageKey();
+
+        if (profileImageKey == null || profileImageKey.isEmpty()) {
+            throw new IllegalArgumentException("프로필 이미지가 없습니다.");
+        }
+
+        return profileImageKey;
+    }
+
+    @Transactional
+    public void updateUrl(Long memberId, URL url) {
+        Member member = memberRespository.findById(memberId)
+                .orElseThrow(() -> new IllegalArgumentException("회원을 찾을 수 없습니다."));
+        member.updateUrl(url.toString());
     }
 }
